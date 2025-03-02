@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: xilocanvas
+Version: 0.1.0
+Summary: Xilocanvas control for Flet
+Author-email: Flet contributors <you@example.com>
+Project-URL: Homepage, https://mydomain.dev
+Project-URL: Documentation, https://github.com/MyGithubAccount/xilocanvas
+Project-URL: Repository, https://github.com/MyGithubAccount/xilocanvas
+Project-URL: Issues, https://github.com/MyGithubAccount/xilocanvas/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flet>=0.26.0
+
+# xilocanvas
+Xilocanvas control for Flet
+
+TODO: Add your control documentation here.
