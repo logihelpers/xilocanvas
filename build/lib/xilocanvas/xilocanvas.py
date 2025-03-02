@@ -144,8 +144,14 @@ class Xilocanvas(ConstrainedControl):
     def on_capture(self, handler):
         self._add_event_handler("captured", handler)
     
-    def capture(self):
-        self.invoke_method("capture")
+    def capture(self, width: float, height: float):
+        self.invoke_method(
+            "capture", 
+            {
+                "width": str(width), 
+                "height": str(height)
+            }
+        )
 
     # on_resize
     @property

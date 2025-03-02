@@ -44,7 +44,7 @@ def main(page: ft.Page):
             bgcolor=ft.Colors.PURPLE_200,
             content=xilocanvas
         ),
-        ft.ElevatedButton("PRINT", on_click= lambda x: xilocanvas.capture()),
+        ft.ElevatedButton("PRINT", on_click= lambda x: xilocanvas.capture(300, 300)),
         image
     )
 

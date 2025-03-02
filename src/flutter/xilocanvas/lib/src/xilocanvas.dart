@@ -76,9 +76,9 @@ class _XilocanvasControlState extends State<XilocanvasControl> {
   Size? _lastSize;
   FletCustomPainter? painter;
 
-  Future<String> _captureCanvas() async {
+  Future<String> _captureCanvas(double width, double height) async {
     try {
-      Uint8List? byteData = await painter?.toPng(const Size(300, 300));
+      Uint8List? byteData = await painter?.toPng(Size(width, height));
       if (byteData != null) {
         String base64_image = base64Encode(byteData);
         widget.backend.triggerControlEvent(widget.control.id, "captured", base64_image);
@@ -102,7 +102,10 @@ class _XilocanvasControlState extends State<XilocanvasControl> {
           (methodName, args) async {
         switch (methodName) {
           case "capture":
-            await _captureCanvas();
+            await _captureCanvas(
+              double.parse(args["width"].toString()), 
+              double.parse(args["height"].toString())
+            );
         }
         return null;
       });
